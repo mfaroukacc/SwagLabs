@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SwagLabs">
+    <parameter name="browsername" value=""/>
+<suite-files>
+    <suite-file path="newdemo.xml"/>
+</suite-files>
+</suite>
