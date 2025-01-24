@@ -162,68 +162,14 @@ public class Utility {
         return streetNumber + " " + streetName + " " + streetType + ", " + city + ", " + state + " " + zipCode;
     }
 
-//    /*
-//    // generate random firstname
-//    private static final String CHAR_LIST = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//    private static final int RANDOM_STRING_LENGTH = 10;
-//
-//    public static String generateRandomFirstName() {
-//        StringBuilder randStr = new StringBuilder();
-//        Random rand = new Random();
-//
-//        for (int i = 0; i < RANDOM_STRING_LENGTH; i++) {
-//            int index = rand.nextInt(CHAR_LIST.length());
-//            char c = CHAR_LIST.charAt(index);
-//            randStr.append(c);
-//        }
-//
-//        return randStr.toString();
-//    }
-//
-//    //generate random mobile number
-//    private static final String COUNTRY_CODE = "+966"; // Replace with the desired country code
-//    private static final String[] PREFIXES = { "50", "53", "54", "55", "56", "59" };
-//
-//    public static String generateRandomPhoneNumber() {
-//        Random rand = new Random();
-//
-//        // Choose a random prefix
-//        String prefix = PREFIXES[rand.nextInt(PREFIXES.length)];
-//
-//        // Generate 7 random digits for the remaining part of the number
-//        String remainingDigits = String.format("%07d", rand.nextInt(10000000));
-//
-//        // Combine country code, prefix, and remaining digits
-//        String phoneNumber = COUNTRY_CODE + prefix + remainingDigits;
-//
-//        return phoneNumber;
-//    }
-//
-////    public static void main(String[] args) {
-////        String randomPhoneNumber = generateRandomPhoneNumber();
-////        System.out.println("Random Phone Number: " + randomPhoneNumber);
-////    }
-//
-//    //Generate LastNAme
-//    private static final String charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//    private static final int randomStringLingth = 10;
-//
-//    // Method to generate a random last name
-//    public static String generateRandomLastName() {
-//        StringBuilder randStr = new StringBuilder();
-//        Random rand = new Random();
-//
-//        for (int i = 0; i < randomStringLingth; i++) {
-//            int index = rand.nextInt(charList.length());
-//            char c = CHAR_LIST.charAt(index);
-//            randStr.append(c);
-//        }
-//
-//        return randStr.toString();
-//    }
-//     */
+    public static String getRandomZipCodePrefix() {
+        Random random = new Random();
+        int index = random.nextInt(ZIP_CODES_PREFIXES.length);  // Random index in the array
+        return ZIP_CODES_PREFIXES[index];  // Return the random ZIP code prefix
+    }
 
 }
+
 
 
 

@@ -1,10 +1,10 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 
+import java.io.File;
 import java.io.IOException;
 
 import static drivers.DriverHolder.getDriver;
@@ -46,4 +46,18 @@ public class PageBase {
         }
     }
 
+    public static void captureScreenshot(WebDriver driver, String screenshotName) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        try {
+            FileHandler.copy(takesScreenshot.getScreenshotAs(OutputType.FILE), new File(System.getProperty("user.dir")
+                    + "/src/test/resources/Screenshots/" + screenshotName + System.currentTimeMillis() + ".png"));
+        } catch (WebDriverException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+
+

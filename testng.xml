@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SwagLabs">
-    <parameter name="browsername" value=""/>
+    <parameter name="browsername" value="chrome"/>
 <suite-files>
-    <suite-file path="newdemo.xml"/>
+    <suite-file path="SauceDemoFirstMethod.xml"/>
 </suite-files>
 </suite>

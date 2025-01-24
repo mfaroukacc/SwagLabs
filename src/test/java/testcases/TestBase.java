@@ -20,10 +20,10 @@ public class TestBase {
 
     @Parameters("browsername")
     @BeforeTest
-    public void OpenBrower(@Optional String browsername) {
+    public void Openbrowser(@Optional String browsername) {
         setDriver(DriverFactory.getNewInstance(""));
 
-        getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         getDriver().get("https://www.saucedemo.com/v1/");
 

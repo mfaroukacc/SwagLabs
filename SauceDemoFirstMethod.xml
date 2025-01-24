@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SauceLab">
+    <test name="Create Successful Order">
+        <classes>
+            <class name="testcases.TC01_Login"/>
+            <class name="testcases.TC02_Products"/>
+            <class name="testcases.TC03_CheckOut_Fill_Information"/>
+            <class name="testcases.TC04_CheckOut_Overview"/>
+        </classes>
+    </test>
+</suite>
